@@ -1,4 +1,14 @@
 {
-  "streams": []
-
+  "streams": [
+    {
+      "title": "Seiji's Stream",
+      "description": "Pretty much the best stream ever",
+      "id": 1
+    },
+    {
+      "title": "Other Stream",
+      "description": "Here's some stream",
+      "id": 2
+    }
+  ]
 }
