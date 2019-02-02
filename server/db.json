@@ -9,6 +9,18 @@
       "title": "Other Stream",
       "description": "Here's some stream",
       "id": 2
+    },
+    {
+      "title": "Seiji's fun house",
+      "description": "House of fun ",
+      "userId": "100951098637903865277",
+      "id": 3
+    },
+    {
+      "title": "Programmatic Nav",
+      "description": "You should not see this on the form page",
+      "userId": "100951098637903865277",
+      "id": 4
     }
   ]
 }

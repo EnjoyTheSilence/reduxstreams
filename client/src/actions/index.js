@@ -1,4 +1,5 @@
 import streams from '../apis/streams';
+import history from '../history';
 import {
   SIGN_IN,
   SIGN_OUT ,
@@ -22,10 +23,17 @@ export const signOut = () => {
   };
 };
 
-export const createStream = formValues => async dispatch => {
-    const response = await streams.post('/streams', formValues);
+export const createStream = formValues => async (dispatch, getState) => {
+    const { userId } = getState().auth;
+    //adds users google id to our db alongside the stream they created
+    const response = await streams.post('/streams', { ...formValues , userId });
 
     dispatch({ type: CREATE_STREAM, payload: response.data });
+    history.push('/')
+    //programmatic navigation to direct user back to root route
+    //when successful stream create
+    //use push to navigate user to where we want to go
+      //ex / for root
 };
 
 export const fetchStreams = () => async dispatch => {
