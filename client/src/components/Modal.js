@@ -1,11 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import history from '../history';
 
 const Modal = props => {
   return ReactDOM.createPortal(
     <div
-      onClick={()=>history.push('/')}
+      onClick={props.onDismiss}
       className="ui dimmer modals visible active"
     >
       <div
@@ -13,20 +12,9 @@ const Modal = props => {
           //stops event from bubbling up and being called when we click on modal box
         className="ui standard modal visible active"
       >
-        <div className="header">
-          {props.title}
-        </div>
-        <div className="content">
-          Are you sure you want to delete this stream?
-        </div>
-        <div className="actions">
-          <button className="ui primary button">
-            Delete
-          </button>
-          <button className="ui button" >
-            Cancel
-          </button>
-        </div>
+        <div className="header">{props.title}</div>
+        <div className="content">{props.content}</div>
+        <div className="actions">{props.actions}</div>
       </div>
     </div>,
     document.querySelector('#modal')
