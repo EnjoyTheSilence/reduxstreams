@@ -20,7 +20,12 @@ class StreamShow extends React.Component{
     this.buildPlayer();
     //since componentDidMount only loads once,
     //once we get the player to load we need to call buildPlayer again
-    //to display the created player 
+    //to display the created player
+  }
+
+  componentWillUnmount(){
+    this.player.destroy();
+    //will tell player to stop attempting to stream video
   }
 
   buildPlayer(){
