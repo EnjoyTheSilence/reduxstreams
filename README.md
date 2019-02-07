@@ -9,8 +9,8 @@ Dependencies: \
 •Redux-thunk \
 •Node-Media-Server \
 •flv \
-•lodash \ 
-•Axios \
+•lodash \
+•Axios
 \
 Styling:  \
-•Semantic-ui \
+•Semantic-ui 
